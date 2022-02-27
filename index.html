@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Meal-DB</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS v5.0.2 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- css link  -->
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <header class="container">
+        <!-- input section  -->
+        <div class="input-group my-5 w-50 mx-auto">
+            <input id="input-fild" type="text" class="form-control" placeholder="search Your Fevoriews Food Name" aria-label="" aria-describedby="search-btn">
+            <button onclick="loadData()" class="btn btn-outline-secondary" type="button" id="search-btn">search</button>
+        </div>
+
+    </header>
+
+
+    <main>
+
+
+        <!-- single food section  -->
+        <section id="single-food" class="my-5">
+
+
+        </section>
+
+
+        <!-- display data  -->
+        <section>
+            <div id="food-container" class="row row-cols-1 row-cols-md-3 g-4">
+            </div>
+        </section>
+
+
+    </main>
+
+
+
+
+    <!-- JavaScript -->
+    <script src="app.js"></script>
+</body>
+
+</html>
