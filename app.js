@@ -2,11 +2,17 @@ const loadData = () => {
     const inputText = document.getElementById('input-fild');
     const inputValue = inputText.value;
     inputText.value = '';
+    if (inputValue === '' || !isNaN(inputValue)) {
+        document.getElementById('error').style.display = 'block'
+    } else {
+        document.getElementById('error').style.display = 'none'
 
-    const url = `https://www.themealdb.com/api/json/v1/1/search.php?s=${inputValue}`
-    fetch(url)
-        .then(res => res.json())
-        .then(data => displayData(data.meals))
+        const url = `https://www.themealdb.com/api/json/v1/1/search.php?s=${inputValue}`
+        fetch(url)
+            .then(res => res.json())
+            .then(data => displayData(data.meals))
+    }
+
 }
 
 
