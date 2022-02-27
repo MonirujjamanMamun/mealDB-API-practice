@@ -13,6 +13,7 @@ const loadData = () => {
 const displayData = (numbers) => {
     // console.log(numbers)
     const foodContainer = document.getElementById("food-container");
+    foodContainer.textContent = '';
     for (const number of numbers) {
         const div = document.createElement('div');
         div.classList.add("col");
@@ -39,6 +40,7 @@ const singelFood = (data) => {
 const singleFoodDisplay = (number) => {
     console.log(number)
     const singleFood = document.getElementById("single-food");
+    singleFood.textContent = '';
     singleFood.innerHTML = `
         <div class="card">
             <img src="${number.strMealThumb}" class="card-img-top" alt="">
