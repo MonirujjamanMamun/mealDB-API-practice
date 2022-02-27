@@ -2,8 +2,10 @@ const loadData = () => {
     const inputText = document.getElementById('input-fild');
     const inputValue = inputText.value;
     inputText.value = '';
+    document.getElementById('spinner').style.display = "block"
     if (inputValue === '' || !isNaN(inputValue)) {
         document.getElementById('error').style.display = 'block'
+        document.getElementById('spinner').style.display = "none"
     } else {
         document.getElementById('error').style.display = 'none'
 
@@ -17,7 +19,7 @@ const loadData = () => {
 
 
 const displayData = (numbers) => {
-    // console.log(numbers)
+    document.getElementById('spinner').style.display = "none"
     const foodContainer = document.getElementById("food-container");
     foodContainer.textContent = '';
     for (const number of numbers) {
